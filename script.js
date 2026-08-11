@@ -1,0 +1,21 @@
+function insertar(valor) {
+    document.getElementById("display").value += valor;
+}
+
+function limpiar() {
+    document.getElementById("display").value = "";
+}
+
+function borrar() {
+    let display = document.getElementById("display");
+    display.value = display.value.slice(0, -1);
+}
+
+function calcular() {
+    try {
+        let resultado = eval(document.getElementById("display").value);
+        document.getElementById("display").value = resultado;
+    } catch {
+        document.getElementById("display").value = "Error";
+    }
+}
